@@ -1,7 +1,6 @@
 . "$PSScriptRoot\Scoop.ps1"
 
 ScoopBucket extras
-ScoopBucket java
 
 # Show status just for update checks
 scoop status
@@ -11,22 +10,15 @@ $Packages = @(
   "neovim",
   "yarn",
   "fzf",
-  "aws",
   "ctags",
   "hub",
   "nodejs",
-  "dbeaver",
   "hyper",
   "gpg4win",
-  "openjdk",
-  "python"
 )
 foreach ($Package in $Packages) {
   ScoopInstall $Package
 }
-
-python -m pip install --upgrade pip
-pip install awslogs
 
 # Configure ctags
 Copy-Item $PSScriptRoot\.ctags -Destination $HOME\.ctags
@@ -47,7 +39,7 @@ nvim +'PlugInstall --sync' +qa
 yarn global add typescript typescript-language-server prettier jest
 
 # Caps lock should be control
-reg import C:\Users\alanj\OneDrive\Config\caps_lock_to_control.reg
+reg import $PSScriptRoot\caps_lock_to_control.reg
 
 # Install hyper-v
 if ((Get-WindowsOptionalFeature -Online -FeatureName Microsoft-Hyper-V).State -ne "Enabled") {
