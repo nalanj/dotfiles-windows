@@ -14,7 +14,16 @@ $Packages = @(
   "hub",
   "nodejs",
   "hyper",
-  "gpg4win"
+  "gpg4win",
+  "ripgrep",
+  "doctl",
+  "kubectl",
+  "terraform",
+  "WinDirStat",
+  "sysinternals",
+  "steam",
+  "hub",
+  "captura"
 )
 foreach ($Package in $Packages) {
   ScoopInstall $Package
