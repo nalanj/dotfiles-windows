@@ -14,7 +14,10 @@ $Packages = @(
   "hub",
   "nodejs",
   "hyper",
-  "gpg4win"
+  "gpg4win",
+  "youtube-dl",
+  "ffmpeg",
+  "vcredist2010"
 )
 foreach ($Package in $Packages) {
   ScoopInstall $Package
