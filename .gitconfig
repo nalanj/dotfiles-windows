@@ -1,0 +1,12 @@
+[credential]
+  helper = wincred
+[user]
+  name = Alan Johnson
+  email = nalanj@fastmail.com
+[commit]
+	gpgsign = true
+  signingkey = 4471D160
+[core]
+  autocrlf = input
+[gpg]
+  program = C:\\Users\\alanj\\scoop\\apps\\gpg4win\\3.1.11\\Gpg4win\\..\\GnuPG\\bin\\gpg.exe
