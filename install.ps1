@@ -41,7 +41,9 @@ Copy-Item $PSScriptRoot\.hyper.js -Destination $env:AppData\Hyper\.hyper.js
 
 # Configure nvim
 New-Item -Path $env:LocalAppData\nvim -ItemType Directory -Force
+New-Item -Path $env:LocalAppData\nvim\autoload -ItemType Directory -Force
 Copy-Item $PSScriptRoot\init.vim -Destination $env:LocalAppData\nvim\init.vim
+Copy-Item $PSScriptRoot\plug.vim -Destination $env:LocalAppData\nvim\autoload\plug.vim
 nvim +'PlugInstall --sync' +qa
 
 # Yarn packages
