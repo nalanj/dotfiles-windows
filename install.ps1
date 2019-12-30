@@ -26,8 +26,7 @@ $Packages = @(
   "sysinternals",
   "steam",
   "hub",
-  "captura",
-  "spotify"
+  "captura"
 )
 foreach ($Package in $Packages) {
   ScoopInstall $Package
